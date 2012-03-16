@@ -17,7 +17,7 @@
     <string name="battery">Battery</string>
     <string name="nav_bar">Navigation bar</string>
     <string name="tools">Tools</string>
-    <!--string name="weather">Weather</string-->
+    <string name="weather">Weather</string>
     
     <string name="header_summary_battery">Battery bar, 1% battery mod, etc</string>
     <string name="header_summary_general_ui">Boot animation, bug mailer, rotation, IME switcher, etc</string>
@@ -29,7 +29,7 @@
     <string name="header_summary_general">Settings button behavior</string>
     <string name="header_summary_toggles">Customize toggles</string>
 	<!--string name="header_summary_clock">Clock location, AM/PM style, color</string-->
-	<!--string name="header_summary_weather">Enable/disable, set custom location or network, and interval</string-->
+	<string name="header_summary_weather">Enable/disable, set custom location or network, and interval</string>
 	
     <string name="advanced_settings">Advanced settings</string>
     <string name="misc_short">Misc</string>
@@ -120,6 +120,8 @@
     <string name="show_lock_before_unlock_summary">Show standard lockscreen before secure unlock</string>
     <string name="lockscreen_battery_title">Lockscreen Battery Percentage</string>
     <string name="lockscreen_battery_summary">Always show battery percentage on the lockscreen</string>
+	<string name="lockscreen_weather_title">Lockscreen Weather</string>
+    <string name="lockscreen_weather_summary">Show Weather Information on Lockscreen. You need to enable Weather service to use this</string>
     <string name="volume_wake_title">Volume wake</string>
     <string name="volume_wake_summary">Tapping the volume keys while your phone is off will turn the screen on.</string>
     <string name="volume_music_controls_title">Volume music controls</string>
@@ -140,7 +142,7 @@
     <string name="lockscreen_quick_unlock_control_title">Quick pin unlock</string>
     <string name="lockscreen_quick_unlock_control_summary">Unlock password/pin lockscreen without pressing enter button</string>
     <string name="enable_fast_torch_title">Enable fast torch</string>
-    <string name="enable_fast_torch_summary">While your screen is off, you can long-press the power key to turn the LED light on. Letting go of the power button will turn the torch off. To ensure it will work, triple-tap your power key and don\'t let go the third time.</string>
+    <string name="enable_fast_torch_summary">While your screen is off, you can long-press the power key to turn the LED light on. Letting go of the power button will turn the torch off.</string>
     <string name="lockscreen_wallpaper_title">Choose lockscreen wallpaper</string>
     <string name="lockscreen_wallpaper_summary">You can remove the wallpaper from the menu in this window</string>
     
@@ -240,7 +242,7 @@
 	<string name="select_custom_app_title">Select custom application</string>
 	<string name="group_applications">Applications</string>
 	
-	<!-- Weather 
+	<!-- Weather -->
 	<string name="weather_enable">Enable weather</string>
 	<string name="weather_enable_summary">Whether to pull weather information and display it throughout the ROM.</string>
 	<string name="weather_use_custom_location">Use custom location</string>
@@ -248,9 +250,12 @@
 	<string name="weather_custom_location_dialog_title">Set your location</string>
 	<string name="weather_custom_location_dialog_message">Be sure to follow the examples! Setting an invalid location will stop you from getting weather updates and may cause unexpected behavior.\n\nExamples: New York,NY // New York, NY // 10033 // London, England</string>
 	<string name="weather_custom_location_title">Custom location</string>
+	<string name="weather_show_location_title">Show location</string>
+	<string name="weather_show_location_summary">Show your location.</string>
 	<string name="weather_refresh_interval">Refresh interval</string>
-	<string name="weather_use_celcius">Display temp in Celcius</string>
-	<string name="weather_use_celcius_summary">Enabling this will display weather temperature in Ceclius rather than Fahrenheit.</string>-->
+	<string name="weather_use_celcius">Metric units</string>
+	<string name="weather_use_celcius_summary">Enabling this will display weather temperature in Celsius rather than Fahrenheit and windspeed in km/h rather than mph.</string>
+	<string name="weather_statusbar_style">Statusbar weather style</string>
 	
 	<!-- Dialog Titles -->
 	<string name="dt_free_memory">Minfree Taskkiller</string>

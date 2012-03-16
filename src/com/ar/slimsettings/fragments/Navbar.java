@@ -110,7 +110,7 @@ public class Navbar extends SettingsPreferenceFragment implements
         mLayout = findPreference("buttons");
 
         if (mTablet) {
-            Log.e("ROMAN", "is tablet");
+            Log.e("NavBar", "is tablet");
             prefs.removePreference(mLayout);
             prefs.removePreference(mNavBarEnabledButtons);
             prefs.removePreference(mHomeLongpress);

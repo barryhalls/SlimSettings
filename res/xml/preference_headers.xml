@@ -32,12 +32,12 @@
 		android:icon="@drawable/ic_slim_settings_power_menu"
 		android:summary="@string/header_summary_power_menu" /-->
 		
-	<!--header
+	<header
 		android:id="@+id/weather"
 		android:fragment="com.ar.slimsettings.fragments.Weather"
 		android:title="@string/weather"
-		android:summary="@string/header_summary_weather" 
-		android:icon="@drawable/ic_slim_settings_weather"/-->
+		android:summary="@string/header_summary_weather"
+		android:icon="@drawable/ic_slim_settings_weather" />
 
 	<header
 		android:id="@+id/functionality"

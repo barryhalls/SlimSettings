@@ -457,6 +457,36 @@
 		<item>custom</item>
 	</string-array>
 	
+	<string-array name="weather_interval_entries">
+		<item>Off</item>
+		<item>1 minutes</item>
+		<item>5 minutes</item>
+		<item>10 minutes</item>
+		<item>30 minutes</item>
+		<item>45 minutes</item>
+		<item>60 minutes</item>
+		<item>2 hours</item>
+		<item>3 hours</item>
+		<item>4 hours</item>
+		<item>6 hours</item>
+		<item>8 hours</item>
+	</string-array>
+	
+	<string-array name="weather_interval_values">
+		<item>0</item>
+		<item>1</item>
+		<item>5</item>
+		<item>10</item>
+		<item>30</item>
+		<item>45</item>
+		<item>60</item>
+		<item>120</item>
+		<item>180</item>
+		<item>240</item>
+		<item>360</item>
+		<item>480</item>
+	</string-array>
+	
 	<string-array name="lcd_density_stock_entries">
 		<item>160 -- mdpi</item>
 		<item>182 -- mdpi</item>
@@ -471,5 +501,49 @@
 		<item>200</item>
 		<item>240</item>
 		<item>320</item>
+	</string-array>
+
+	
+	<string-array name="weather_statusbar_location_entries">
+		<item>Above carrier text</item>
+		<item>Weather panel</item>
+		<item>Disabled</item>
+	</string-array>
+	
+	<string-array name="weather_statusbar_location_values">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+		
+	<string-array name="navigation_bar_width_entries">
+		<item>42 dp (default)</item>
+		<item>36 dp</item>
+		<item>30 dp</item>
+		<item>24 dp</item>
+	</string-array>
+	
+	<string-array name="navigation_bar_width">
+		<item>42</item>
+		<item>36</item>
+		<item>30</item>
+		<item>24</item>
+	</string-array>
+	
+	<string-array name="navigation_bar_height_entries">
+		<item>48 dp (default)</item>
+		<item>42 dp</item>
+		<item>36 dp</item>
+		<item>30 dp</item>
+		<item>24 dp</item>
+	</string-array>
+	
+	
+	<string-array name="navigation_bar_height">
+		<item>48</item>
+		<item>42</item>
+		<item>36</item>
+		<item>30</item>
+		<item>24</item>
 	</string-array>
 </resources>

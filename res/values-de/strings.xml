@@ -226,6 +226,7 @@
 	<string name="select_custom_app_title">Wähle eigene App</string>
 	<string name="group_applications">Apps</string>
 	
+    <string name="weather_statusbar_style">Statusbar weather style</string>
 	
 <!-- Weather -->
 	<string name="weather_enable">Wetter aktivieren</string>
