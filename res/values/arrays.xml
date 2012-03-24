@@ -383,6 +383,7 @@
 		<item>BT</item>
 		<item>GPS</item>
 		<item>WIFI</item>
+		<item>AP</item>
 		<item>LTE</item>
 		<item>2G</item>
 		<item>DATA</item>
@@ -398,6 +399,7 @@
 		<item>BT</item>
 		<item>GPS</item>
 		<item>Wi-Fi</item>
+		<item>Wi-Fi AP</item>
 		<item>LTE</item>
 		<item>2G</item>
 		<item>Data</item>
