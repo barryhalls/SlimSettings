@@ -25,12 +25,12 @@
 		android:icon="@drawable/ic_slim_settings_lockscreens"
 		android:summary="@string/header_summary_lockscreens" />
 
-	<!--header
+	<header
 		android:id="@+id/power_menu"
 		android:fragment="com.ar.slimsettings.fragments.PowerMenu"
 		android:title="@string/power_menu_optons"
 		android:icon="@drawable/ic_slim_settings_power_menu"
-		android:summary="@string/header_summary_power_menu" /-->
+		android:summary="@string/header_summary_power_menu" />
 		
 	<header
 		android:id="@+id/weather"
@@ -98,5 +98,12 @@
 		android:summary="@string/ps_performance"
 		android:fragment="com.ar.slimsettings.fragments.Performance"
 		android:icon="@drawable/ic_slim_settings_performance" />
+
+	<header
+        android:id="@+id/init_d"
+        android:title="@string/pt_init_d"
+        android:summary="@string/ps_init_d"
+        android:fragment="com.ar.slimsettings.fragments.InitD"
+        android:icon="@drawable/ic_slim_settings_init_d"/>
 
 </preference-headers>

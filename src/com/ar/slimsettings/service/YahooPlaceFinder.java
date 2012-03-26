@@ -1,8 +1,6 @@
 
 package com.ar.slimsettings.service;
 
-import android.util.Log;
-
 import com.ar.slimsettings.xml.WeatherXmlParser;
 
 public class YahooPlaceFinder {

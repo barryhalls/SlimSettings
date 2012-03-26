@@ -27,7 +27,7 @@ public class CreateShortcut extends LauncherActivity {
     @Override
     protected Intent getTargetIntent() {
         Intent targetIntent = new Intent(Intent.ACTION_MAIN, null);
-        targetIntent.addCategory("com.aokp.slimsettings.SHORTCUT");
+        targetIntent.addCategory("com.ar.slimsettings.SHORTCUT");
         targetIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         return targetIntent;
     }
@@ -40,8 +40,8 @@ public class CreateShortcut extends LauncherActivity {
 
         shortcutIntent = new Intent();
         shortcutIntent.setClass(getApplicationContext(), SlimSettingsActivity.class);
-        shortcutIntent.setAction("com.aokp.slimsettings.START_NEW_FRAGMENT");
-        shortcutIntent.putExtra("aokp_fragment_name", intentClass);
+        shortcutIntent.setAction("com.ar.slimsettings.START_NEW_FRAGMENT");
+        shortcutIntent.putExtra("ar_fragment_name", intentClass);
         shortcutIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         shortcutIntent.setFlags(Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
 
@@ -81,6 +81,8 @@ public class CreateShortcut extends LauncherActivity {
             return R.drawable.ic_slim_settings_general_ui;
         else if (c.equals("Weather"))
             return R.drawable.ic_slim_settings_weather;
+		else if (c.equals("InitD"))
+            return R.drawable.ic_slim_settings_init_d;
         else
             return R.mipmap.ic_launcher;
     }

@@ -1,12 +1,6 @@
 
 package com.ar.slimsettings.tools;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
@@ -19,6 +13,12 @@ import android.util.Log;
 import com.ar.slimsettings.R;
 import com.ar.slimsettings.util.CMDProcessor;
 import com.ar.slimsettings.util.Helpers;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class InitD extends Activity {
 

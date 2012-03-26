@@ -1,11 +1,6 @@
 
 package com.ar.slimsettings.service;
 
-import java.util.Calendar;
-import java.util.concurrent.TimeUnit;
-
-import com.ar.slimsettings.util.WeatherPrefs;
-
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -13,9 +8,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
-import android.os.Binder;
 import android.os.IBinder;
-import android.util.Log;
+
+import com.ar.slimsettings.util.WeatherPrefs;
+
+import java.util.Calendar;
 
 public class WeatherRefreshService extends Service {
 

@@ -76,8 +76,8 @@ public class SlimSettingsActivity extends PreferenceActivity implements ButtonBa
             setTitle(R.string.app_name);
         }
 
-        if (getIntent().getAction().equals("com.aokp.slimsettings.START_NEW_FRAGMENT")) {
-            String className = getIntent().getStringExtra("aokp_fragment_name").toString();
+        if (getIntent().getAction().equals("com.ar.slimsettings.START_NEW_FRAGMENT")) {
+            String className = getIntent().getStringExtra("ar_fragment_name").toString();
             Bundle b = new Bundle();
             b.putBoolean("started_from_shortcut", true);
             // startPreferencePanel(className, b, 0, null, null, 0);
@@ -213,17 +213,6 @@ public class SlimSettingsActivity extends PreferenceActivity implements ButtonBa
             if (id == R.id.led) {
                 if (!hasNotificationLed) {
                     target.remove(header);
-                }
-            } else if (id == R.id.nav_bar) {
-                // remove navigation bar options
-                IWindowManager mWindowManager = IWindowManager.Stub.asInterface(ServiceManager
-                        .getService(Context.WINDOW_SERVICE));
-                try {
-                    if (!mWindowManager.hasNavigationBar() && !mTablet) {
-                        target.remove(header);
-                    } else {
-                    }
-                } catch (RemoteException e) {
                 }
             } else if (id == R.id.power_saver && mTablet)
                 target.remove(header);

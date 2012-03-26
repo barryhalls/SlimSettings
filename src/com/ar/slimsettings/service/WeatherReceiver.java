@@ -1,10 +1,9 @@
 
 package com.ar.slimsettings.service;
 
-import android.content.Context;
 import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
-import com.ar.slimsettings.service.WeatherService;
 
 public class WeatherReceiver extends BroadcastReceiver {
     @Override

@@ -6,7 +6,7 @@
     <string name="user_interface">User Interface</string>
     <string name="general_ui">General UI</string>
     <string name="lockscreen_options">Lockscreen options</string>
-    <!--string name="power_menu_optons">Power menu options</string-->
+    <string name="power_menu_optons">Power menu options</string>
     <string name="functionality">Functionality</string>
     <string name="power_saver">Power saver</string>
     <string name="led_options">LED options</string>
@@ -23,7 +23,7 @@
     <string name="header_summary_general_ui">Boot animation, bug mailer, rotation, IME switcher, etc</string>
     <string name="header_summary_navigation_bar">Buttons to display, nav bar color, order</string>
     <string name="header_summary_lockscreens">Custom apps to launch, layout</string>
-    <!--string name="header_summary_power_menu">What to display in your power menu</string-->
+    <string name="header_summary_power_menu">What to display in your power menu</string>
     <string name="header_summary_powersaver">Automatically disable data to save battery</string>
     <string name="header_summary_led">Change default settings for Android to use</string>
     <string name="header_summary_general">Settings button behavior</string>
@@ -67,6 +67,8 @@
 	<string name="custom_carrier_label_title">Custom carrier label</string>
 	<string name="longpress_to_kill_title">Hold back to kill</string>
 	<string name="longpress_to_kill_summary">Holding back will kill the current activity</string>
+        
+        <string name="enable_volume_options">Enable Volume Options</string>
 	
 	<string name="rotate_180_title">Allow 180° rotation</string>
 	<string name="rotate_180_summary">Allow your device to rotate upside down!</string>
@@ -145,12 +147,29 @@
     <string name="enable_fast_torch_summary">While your screen is off, you can long-press the power key to turn the LED light on. Letting go of the power button will turn the torch off.</string>
     <string name="lockscreen_wallpaper_title">Choose lockscreen wallpaper</string>
     <string name="lockscreen_wallpaper_summary">You can remove the wallpaper from the menu in this window</string>
+    <string name="lockscreen_text_color_title">Lockscreen text color</string>
+    <string name="lockscreen_calendar">Lockscreen calendar</string>
+    <string name="lockscreen_calendar_title">Enable</string>
+    <string name="lockscreen_calendar_summary">Show upcoming event(s) from your calendar on the lockscreen.</string>
+    <string name="lockscreen_calendar_sources_title">Calendar sources</string>
+    <string name="lockscreen_calendar_sources_summary">Select the calendars you want to see.</string>
+    <string name="lockscreen_calendar_range_title">Time-range</string>
+    <string name="lockscreen_calendar_range_summary">Select the time-range to be displayed.</string>
+    <string name="lockscreen_calendar_use_colors_title">Use colors</string>
+    <string name="lockscreen_calendar_use_colors_summary">If enabled, events will be colored like in your calendar.</string>
+    <string name="lockscreen_calendar_hide_ongoing_title">Hide ongoing events</string>
+    <string name="lockscreen_calendar_hide_ongoing_summary">If enabled, events which already started won\'t show up.</string>
+    <string name="lockscreen_calendar_flip_title">Multiple events</string>
+    <string name="lockscreen_calendar_flip_summary">If enabled, the widget will display multiple events by flipping between them.</string>
+    <string name="lockscreen_calendar_interval_title">Flip interval</string>
+    <string name="lockscreen_calendar_interval_summary">Choose the animation speed in seconds.</string>
     
-    <!-- Power Menu 
+    <!-- Power Menu -->
     <string name="title_show_power_saver">Show power saver</string>
     <string name="title_show_screenshot">Show screenshot</string>
     <string name="title_show_torch_toggle">Show torch toggle</string>
-    <string name="title_show_airplane_toggle">Show airplane toggle</string>-->
+    <string name="title_show_airplane_toggle">Show airplane toggle</string>
+    <string name="title_show_navbar_hide">Show navigation bar toggle</string>
     
     <!-- Power Saving -->
     <string name="title_pref_powersaving_pref_mode">Enable power saver</string>
@@ -177,6 +196,8 @@
     <string name="title_led_off">LED pulse OFF duration</string>
     <string name="summary_led_off">@null</string>
     <string name="led_color_title">LED color</string>
+    <string name="title_led_screen_on">LED flash while screen ON</string>
+    <string name="summary_led_screen_on">@null</string>
 
     <!--  Statusbar | General -->
     <string name="title_settings_behavior">Use default settings behavior</string>
@@ -370,4 +391,16 @@
 	
 	<string name="dpi">DPI</string>
     
+    <!--  Kernel Tweaks -->
+    <string name="pt_fast_charge_boot">Fast Charge</string>
+    <string name="ps_fast_charge_boot">Enable fast charge at boot</string>
+    <string name="kernel">Kernel Tweaks (if supported)</string>
+    <string name="color_tuning_title_head">Color Multipliers Tuning</string>
+    <string name="color_tuning_summary_head">Calibrate multipliers screen color</string>
+    <string name="gamma_tuning_title_head">Color Gamma Tuning</string>
+    <string name="gamma_tuning_summary_head">Calibrate gamma color correction</string>
+    <string name="color_red_title">Red</string>
+    <string name="color_green_title">Green</string>
+    <string name="color_blue_title">Blue</string>
+    <string name="reset_defaults">Reset to Defaults</string>
 </resources>

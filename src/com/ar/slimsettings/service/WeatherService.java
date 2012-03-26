@@ -1,40 +1,29 @@
 
 package com.ar.slimsettings.service;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.util.List;
-import java.util.Locale;
-
-import org.xml.sax.SAXException;
-
 import android.app.IntentService;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.location.Address;
-import android.location.Geocoder;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
-import android.text.format.Time;
-import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
-
-import org.w3c.dom.Document;
 
 import com.ar.slimsettings.WeatherInfo;
 import com.ar.slimsettings.util.WeatherPrefs;
 import com.ar.slimsettings.xml.WeatherXmlParser;
+import org.w3c.dom.Document;
+
+import java.io.IOException;
 
 public class WeatherService extends IntentService {
 
     public static final String TAG = "WeatherService";
 
-    public static final String INTENT_REQUEST_WEATHER = "com.aokp.slimsettings.INTENT_WEATHER_REQUEST";
-    public static final String INTENT_UPDATE_WEATHER = "com.aokp.slimsettings.INTENT_WEATHER_UPDATE";
+    public static final String INTENT_REQUEST_WEATHER = "com.ar.slimsettings.INTENT_WEATHER_REQUEST";
+    public static final String INTENT_UPDATE_WEATHER = "com.ar.slimsettings.INTENT_WEATHER_UPDATE";
 
     public static final String EXTRA_CITY = "city";
     public static final String EXTRA_FORECAST_DATE = "forecast_date";
@@ -63,6 +52,7 @@ public class WeatherService extends IntentService {
         String woeid = null;
 
         if (Settings.System.getInt(getContentResolver(), Settings.System.USE_WEATHER, 0) == 0) {
+            stopSelf();
             return;
         }
         
@@ -93,8 +83,6 @@ public class WeatherService extends IntentService {
                 } else {
                     loc = locationManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER);
                 }
-                Time time = new Time();
-                time.set(loc.getTime());
                 try {
                     woeid = YahooPlaceFinder.reverseGeoCode(loc.getLatitude(),
                             loc.getLongitude());
@@ -102,9 +90,13 @@ public class WeatherService extends IntentService {
                     e.printStackTrace();
                 }
             }
-            w = parseXml(getDocument(woeid));
-            if (w != null) {
-                sendBroadcast(w);
+            try {
+                w = parseXml(getDocument(woeid));
+                if (w != null) {
+                    sendBroadcast(w);
+                }
+            } catch (Exception e) {
+                Log.e(TAG, "ohnoes: " + e.getMessage());
             }
         }
         stopSelf();

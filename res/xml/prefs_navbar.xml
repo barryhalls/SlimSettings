@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-	xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
 	<CheckBoxPreference
 		android:key="enable_nav_bar"
@@ -33,8 +32,7 @@
 	<Preference
 		android:key="buttons"
 		android:title="@string/navbar_order_title"
-		android:summary="@string/navbar_order_summary">
-	</Preference>
+		android:summary="@string/navbar_order_summary" />
 
 	<PreferenceCategory
 		android:key="advanced_cat"
