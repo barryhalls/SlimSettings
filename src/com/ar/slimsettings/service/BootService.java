@@ -26,6 +26,9 @@ public class BootService extends Service {
     private static final String CUR_GOV = "/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor";
     private static final String MAX_FREQ = "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq";
     private static final String MIN_FREQ = "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq";
+    private static final String KEY_FASTCHARGE = "fast_charge_boot";
+    private static final String FAST_CHARGE_DIR = "/sys/kernel/fast_charge";
+	private static final String FAST_CHARGE_FILE = "force_fast_charge";
     private final BootService service = this;
     public static SharedPreferences preferences;
     private Thread bootThread;
@@ -96,6 +99,26 @@ public class BootService extends Service {
                 }
             }
         };
+        
+        //  Let's set fast_charge from preference
+        boolean FChargeOn = preferences.getBoolean(KEY_FASTCHARGE, false); 
+        Log.d("FChargeBoot","Setting at Boot:" + FChargeOn);
+        try{
+    		File fastcharge = new File(FAST_CHARGE_DIR,FAST_CHARGE_FILE);
+    		FileWriter fwriter = new FileWriter(fastcharge);
+    		BufferedWriter bwriter = new BufferedWriter(fwriter);
+    		bwriter.write(FChargeOn ? "1" : "0");
+    		bwriter.close();
+    		Intent i = new Intent();
+    		i.setAction("com.roman.romcontrol.FCHARGE_CHANGED");
+    		getApplicationContext().sendBroadcast(i);
+    	} catch (IOException e) {
+    		Log.e("FChargeBoot","Couldn't write fast_charge file");
+    	}	
+        
+        // Let's restore color & gamma settings
+        restoreColor();
+        restoreGamma();
         
         if (Settings.System.getInt(getContentResolver(), Settings.System.USE_WEATHER, 0) != 0) {
             Intent startRefresh = new Intent(getApplicationContext(),
