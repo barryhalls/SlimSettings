@@ -77,7 +77,7 @@
 	<string name="horizontal_recents_task_panel_summary">Use WebOS style task switcher. Your UI will restart after changing this. It will come back in about 10 seconds. If it doesn\'t, just reboot the phone from the power menu.</string>
 	
 	<string name="disable_bootanimation_title">Disable boot animation</string>
-	<string name="disable_bootanimation_summary">Jerk.</string>
+	<string name="disable_bootanimation_summary">Don\'t be like that.</string>
 	
 	<string name="disable_bugmailer_title">Disable bugmailer</string>
 

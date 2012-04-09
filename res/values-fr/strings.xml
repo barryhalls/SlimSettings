@@ -72,7 +72,7 @@
     <string name="horizontal_recents_task_panel_summary">Utiliser le style de WebOS pour le changeur de tache. Votre interface utilisateur va redémarrer après avoir changer cette option. Il reviendra sous 10 secondes. Si ce n\'est pas le cas, redémarrer votre téléphone.</string>
 	
     <string name="disable_bootanimation_title">Désactiver l\'animation du démarrage</string>
-    <string name="disable_bootanimation_summary">Imbécile.</string>
+    <string name="disable_bootanimation_summary">Don\'t be like that</string>
 	
     <string name="disable_bugmailer_title">Désactiver bugmailer</string>
 
