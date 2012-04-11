@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    coreApp="true"
-    package="com.ar.slimsettings"
-    android:sharedUserId="android.uid.system" >
+    package="com.ar.slimsettings" >
 
     <original-package android:name="com.ar.slimsettings" />
 
@@ -13,6 +10,7 @@
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
 
     <application
         android:hardwareAccelerated="true"

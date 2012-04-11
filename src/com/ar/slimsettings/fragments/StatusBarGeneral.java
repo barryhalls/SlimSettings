@@ -5,12 +5,14 @@ import android.content.Context;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.util.Log;
 
 import com.ar.slimsettings.R;
 import com.ar.slimsettings.SettingsPreferenceFragment;
+import com.ar.slimsettings.util.Helpers;
 
 public class StatusBarGeneral extends SettingsPreferenceFragment {
 
