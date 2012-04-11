@@ -193,6 +193,34 @@
 		<item>3</item>
 	</string-array>
 
+	<string-array name="statusbar_transparency_entries">
+		<item>No transparency</item>
+		<item>25%</item>
+		<item>50%</item>
+		<item>75%</item>
+		<item>Full transparency</item>
+	</string-array>
+
+	<string-array name="statusbar_transparency_values" translatable="false">
+		<item>100</item>
+		<item>75</item>
+		<item>50</item>
+		<item>25</item>
+		<item>0</item>
+	</string-array>
+
+	<string-array name="statusbar_layout_entries">
+		<item>Regular layout</item>
+		<item>Reversed</item>
+		<item>Traditional</item>
+	</string-array>
+
+	<string-array name="statusbar_layout_values" translatable="false">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+
 	<!-- clock stuff 
 	<string-array name="clock_style_entries">
 		<item>Right clock</item>
@@ -454,7 +482,7 @@
 		<item>BT</item>
 		<item>GPS</item>
 		<item>Wi-Fi</item>
-		<item>Wi-Fi AP</item>
+		<item>AP</item>
 		<item>LTE</item>
 		<item>2G</item>
 		<item>Data</item>

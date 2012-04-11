@@ -164,7 +164,10 @@
     <string name="summary_status_bar_brightness_toggle">Helligkeitsregelung mit dem Berühren der Benachrichtigungsleiste anpassen.</string>
     <string name="adb_icon_title">USB Debugging Symbol aktivieren</string>
     <string name="adb_icon_summary">Wutang</string>
-
+<string name="statusbar_transparency">Transparenz</string>
+    <string name="statusbar_transparency_summary">Kann sich negativ auf die Leistung und Akkulaufzeit auswirken. (Neustart erforderlich)</string>
+<string name="statusbar_layout">Layout der Benachrichtungsleiste</string>
+    <string name="statusbar_layout_summary">Das Layout der Benachrichtungsleiste ändern. (Neustart erforderlich)</string>
     <!-- Statusbar | Battery -->
     <string name="battery_icon">Aussehen des Batteriesymbols</string>
     <string name="battery_summary_text_widget">@null</string>

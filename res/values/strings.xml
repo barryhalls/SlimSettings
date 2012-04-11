@@ -206,6 +206,10 @@
     
     <string name="powersaver_data_cat">Data</string>
     <string name="powersaver_sync_cat">Sync</string>
+    
+    <string name="screen_off_wifi_action">Screen-off Wi-Fi action</string>
+    <string name="sync_data_usage">Sync data usage</string>
+    <string name="sync_mobile_data_preference">Sync mobile data preference</string>
 
     <!--  LED -->
     <string name="title_led_on">LED pulse ON duration</string>
@@ -228,6 +232,12 @@
 
     <string name="adb_icon_title">Enable USB debugging icon</string>
     <string name="adb_icon_summary">Wutang</string>
+
+    <string name="statusbar_transparency">Transparency</string>
+    <string name="statusbar_transparency_summary">Turning this on might affect performance and battery life. (requires UI restart)</string>
+
+    <string name="statusbar_layout">Notification drawer layout</string>
+    <string name="statusbar_layout_summary">Change the notification drawer layout (requires UI restart)</string>
 
     <!-- Statusbar | Battery -->
     <string name="battery_icon">Battery icon style</string>
@@ -262,6 +272,9 @@
     <string name="toggles_order_title">Toggle order</string>
     <string name="toggles_order_summary">Choose the order which your toggles are displayed</string>
     <string name="brightness_location_title">Brightness location</string>
+    <string name="reset_toggles_title">Reset toggles</string>
+    <string name="reset_toggles_summary">Reset all toggles and their order</string>
+
     
 
     <!-- Color Picker -->
