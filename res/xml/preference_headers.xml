@@ -106,4 +106,11 @@
         android:fragment="com.ar.slimsettings.fragments.InitD"
         android:icon="@drawable/ic_slim_settings_init_d"/>
 
+	<header
+        android:id="@+id/ota"
+        android:title="@string/pt_ota"
+        android:summary="@string/ps_ota"
+        android:fragment="com.ar.slimsettings.fragments.OTA"
+        android:icon="@drawable/ic_slim_settings_ota"/>
+
 </preference-headers>

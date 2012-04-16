@@ -433,4 +433,8 @@
     <string name="color_green_title">Green</string>
     <string name="color_blue_title">Blue</string>
     <string name="reset_defaults">Reset to Defaults</string>
+
+	<!-- OTA -->
+        <string name="pt_ota">OTA App</string>
+	<string name="ps_ota">Update Me OTA App</string>
 </resources>

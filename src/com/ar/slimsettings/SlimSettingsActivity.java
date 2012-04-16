@@ -35,6 +35,7 @@ import android.widget.ListAdapter;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import android.content.ComponentName;
 public class SlimSettingsActivity extends PreferenceActivity implements ButtonBarHandler {
 
     private static final String TAG = "Slim_Settings";
@@ -85,6 +86,10 @@ public class SlimSettingsActivity extends PreferenceActivity implements ButtonBa
             startWithFragment(className, null, null, 0);
             finish(); // close current activity
         }
+		
+	/*Intent intentDeviceTest = new Intent("android.intent.action.MAIN");                
+	intentDeviceTest.setComponent(new  ComponentName("com.acquariusoft.UpdateMe","com.acquariusoft.UpdateMe.UpdateMeActivity"));
+	startActivity(intentDeviceTest);*/
     }
 
     @Override

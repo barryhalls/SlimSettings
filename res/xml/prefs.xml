@@ -141,6 +141,15 @@
 				android:targetPackage="com.ar.slimsettings"
 				android:targetClass="com.ar.slimsettings.tools.InitD" />
 		</Preference>
+                <Preference
+			android:key="ota"
+			android:title="@string/pt_ota"
+			android:summary="@string/ps_ota">
+			<intent
+				android:action="android.intent.action.MAIN"
+				android:targetPackage="com.ar.slimsettings"
+				android:targetClass="com.ar.slimsettings.tools.OTA" />
+		</Preference>
 	</PreferenceCategory>
 
 </PreferenceScreen>

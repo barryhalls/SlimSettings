@@ -80,6 +80,15 @@
                 <category android:name="android.ar.slimsettings.SHORTCUT" />
             </intent-filter>
         </activity>
+	<activity
+            android:name=".fragments.OTA"
+            android:label="OTA" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.ar.slimsettings.SHORTCUT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".tools.VoltageControl"
             android:label="Voltage Control" >
