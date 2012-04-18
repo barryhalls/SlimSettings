@@ -72,24 +72,23 @@ public class SlimSettingsActivity extends PreferenceActivity implements ButtonBa
 
         if (!onIsHidingHeaders() && onIsMultiPane()) {
             highlightHeader();
-            // Force the title so that it doesn't get overridden by a direct launch of
+            // Force the title so that it doesn't get overridden by a direct
+            // launch of
             // a specific settings screen.
             setTitle(R.string.app_name);
         }
 
         if (getIntent().getAction().equals("com.ar.slimsettings.START_NEW_FRAGMENT")) {
             String className = getIntent().getStringExtra("ar_fragment_name").toString();
-            Bundle b = new Bundle();
-            b.putBoolean("started_from_shortcut", true);
-            // startPreferencePanel(className, b, 0, null, null, 0);
-            isShortcut = true;
-            startWithFragment(className, null, null, 0);
-            finish(); // close current activity
+            if (!className.equals("com.ar.slimsettings.SlimSettingsActivity")) {
+                Bundle b = new Bundle();
+                b.putBoolean("started_from_shortcut", true);
+                // startPreferencePanel(className, b, 0, null, null, 0);
+                isShortcut = true;
+                startWithFragment(className, null, null, 0);
+                finish(); // close current activity
+            }
         }
-		
-	/*Intent intentDeviceTest = new Intent("android.intent.action.MAIN");                
-	intentDeviceTest.setComponent(new  ComponentName("com.acquariusoft.UpdateMe","com.acquariusoft.UpdateMe.UpdateMeActivity"));
-	startActivity(intentDeviceTest);*/
     }
 
     @Override
@@ -170,8 +169,8 @@ public class SlimSettingsActivity extends PreferenceActivity implements ButtonBa
     }
 
     /**
-     * Override initial header when an activity-alias is causing Settings to be launched for a
-     * specific fragment encoded in the android:name parameter.
+     * Override initial header when an activity-alias is causing Settings to be
+     * launched for a specific fragment encoded in the android:name parameter.
      */
     @Override
     public Header onGetInitialHeader() {
@@ -226,7 +225,8 @@ public class SlimSettingsActivity extends PreferenceActivity implements ButtonBa
 
             // Increment if the current one wasn't removed by the Utils code.
             if (target.get(i) == header) {
-                // Hold on to the first header, when we need to reset to the top-level
+                // Hold on to the first header, when we need to reset to the
+                // top-level
                 if (mFirstHeader == null &&
                         HeaderAdapter.getHeaderType(header) != HeaderAdapter.HEADER_TYPE_CATEGORY) {
                     mFirstHeader = header;
@@ -274,14 +274,16 @@ public class SlimSettingsActivity extends PreferenceActivity implements ButtonBa
     public void setListAdapter(ListAdapter adapter) {
         if (mHeaders == null) {
             mHeaders = new ArrayList<Header>();
-            // When the saved state provides the list of headers, onBuildHeaders is not called
+            // When the saved state provides the list of headers, onBuildHeaders
+            // is not called
             // Copy the list of Headers from the adapter, preserving their order
             for (int i = 0; i < adapter.getCount(); i++) {
                 mHeaders.add((Header) adapter.getItem(i));
             }
         }
 
-        // Ignore the adapter provided by PreferenceActivity and substitute ours instead
+        // Ignore the adapter provided by PreferenceActivity and substitute ours
+        // instead
         super.setListAdapter(new HeaderAdapter(this, mHeaders));
     }
 
@@ -338,8 +340,10 @@ public class SlimSettingsActivity extends PreferenceActivity implements ButtonBa
             super(context, 0, objects);
             mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            // Temp Switches provided as placeholder until the adapter replaces these with actual
-            // Switches inflated from their layouts. Must be done before adapter is set in super
+            // Temp Switches provided as placeholder until the adapter replaces
+            // these with actual
+            // Switches inflated from their layouts. Must be done before adapter
+            // is set in super
         }
 
         @Override
@@ -375,7 +379,8 @@ public class SlimSettingsActivity extends PreferenceActivity implements ButtonBa
                 holder = (HeaderViewHolder) view.getTag();
             }
 
-            // All view fields must be updated every time, because the view may be recycled
+            // All view fields must be updated every time, because the view may
+            // be recycled
             switch (headerType) {
                 case HEADER_TYPE_CATEGORY:
                     holder.title.setText(header.getTitle(getContext().getResources()));
