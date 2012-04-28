@@ -50,6 +50,9 @@ public class InitD extends SettingsPreferenceFragment implements
         public void onCreate(Bundle savedInstanceState) {
 
             super.onCreate(savedInstanceState);
+            //get su permissions faster so there's no hangup while looking up all of the preferences
+
+            new CMDProcessor().su.run("");
 
             PreferenceManager.getDefaultSharedPreferences(getActivity())
                     .registerOnSharedPreferenceChangeListener(this);
