@@ -45,10 +45,13 @@ public class SettingsPreferenceFragment extends PreferenceFragment implements Di
 
     private SettingsDialogFragment mDialogFragment;
     protected boolean mTablet;
+    protected boolean hasFastCharge;
+    
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         mTablet = Settings.System.getInt(getContentResolver(), Settings.System.IS_TABLET, 0) == 1;
+        hasFastCharge = getResources().getBoolean(R.bool.has_fast_charge);
         mContext = getActivity().getApplicationContext();
         super.onCreate(savedInstanceState);
     }

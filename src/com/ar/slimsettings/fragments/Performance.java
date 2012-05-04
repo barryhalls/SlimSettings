@@ -10,10 +10,12 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
+import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.util.Log;
@@ -55,6 +57,8 @@ public class Performance extends SettingsPreferenceFragment implements
     private SharedPreferences preferences;
     private boolean doneLoading = false;
 
+    private CheckBoxPreference mFastCharge;
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -95,7 +99,7 @@ public class Performance extends SettingsPreferenceFragment implements
         mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
         mScrollingCachePref.setValue(Helpers.getSystemProp(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT));
         mScrollingCachePref.setOnPreferenceChangeListener(this);
-        
+
         final int minFree = getMinFreeValue();
         final String values[] = getResources().getStringArray(R.array.minfree_values);
         String closestValue = preferences.getString(KEY_MINFREE, values[0]);
@@ -121,9 +125,16 @@ public class Performance extends SettingsPreferenceFragment implements
                     .removePreference(ps);
         }
 
+        mFastCharge = (CheckBoxPreference) findPreference(KEY_FASTCHARGE);
+        mFastCharge.setChecked(preferences.getBoolean(KEY_FASTCHARGE, false));
+        if (!hasFastCharge) {
+            ((PreferenceGroup) findPreference("kernel")).removePreference(mFastCharge);
+        }
+
+
         doneLoading = true;
     }
-    
+
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         String key = preference.getKey();
@@ -141,16 +152,19 @@ public class Performance extends SettingsPreferenceFragment implements
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 preferences.edit().putBoolean(KEY_FASTCHARGE, false).apply();
+                                mFastCharge.setChecked(false);
                             }
                         })
                         .setPositiveButton(ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 preferences.edit().putBoolean(KEY_FASTCHARGE, true).apply();
+                                mFastCharge.setChecked(true);
                             }
                         })
                         .create()
                         .show();
+                return true;
             }
         }
 
