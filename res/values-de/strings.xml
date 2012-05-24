@@ -63,6 +63,7 @@
     <string name="navbar_action_menu">Menü</string>
     <string name="navbar_action_kill">Task beenden</string>
     <string name="navbar_action_power">Power</string>
+    <string name="navbar_action_screenshot">Screenshot</string>
     <string name="navbar_action_none">Leer</string>
 
     <string name="button_transparency_title">Transparenz der Navigations-Buttons</string>
